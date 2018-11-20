@@ -1,0 +1,7 @@
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\bin\Debug\Introducao.exe.config
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\bin\Debug\Introducao.exe
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\bin\Debug\Introducao.pdb
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\obj\Debug\Introducao.csprojAssemblyReference.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\obj\Debug\Introducao.csproj.CoreCompileInputs.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\obj\Debug\Introducao.exe
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Introducao\obj\Debug\Introducao.pdb
