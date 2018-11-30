@@ -1,0 +1,9 @@
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\bin\Debug\netstandard2.0\LojaDominio.deps.json
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\bin\Debug\netstandard2.0\LojaDominio.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\bin\Debug\netstandard2.0\LojaDominio.pdb
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\obj\Debug\netstandard2.0\LojaDominio.csprojAssemblyReference.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\obj\Debug\netstandard2.0\LojaDominio.csproj.CoreCompileInputs.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\obj\Debug\netstandard2.0\LojaDominio.AssemblyInfoInputs.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\obj\Debug\netstandard2.0\LojaDominio.AssemblyInfo.cs
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\obj\Debug\netstandard2.0\LojaDominio.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\LojaDominio\obj\Debug\netstandard2.0\LojaDominio.pdb
