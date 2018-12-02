@@ -16,6 +16,8 @@ namespace Loja
             var Produto = new Produto(); /*instanciando uma classe*/
             var Produtos = Produto.Listar(); /* Usando um método, e botando o resultado em uma variavel*/
 
+            /*Comentarios: botar comentario: CTRL + K, Ctrl + C remover: CTRL + K, Ctrl + U*/
+
             #region Turotial-3 
 
 
@@ -75,10 +77,10 @@ namespace Loja
             var ProdutosString = ProdutoT4
                 .Where(p => p.Nome.StartsWith("A") || p.Nome.EndsWith("o"))
                 .Select(p => new
-                    {
-                        Nome = p.Nome,
-                        Valor = p.Valor
-                    }
+                {
+                    Nome = p.Nome,
+                    Valor = p.Valor
+                }
                 )
                 .ToList();
 
@@ -96,20 +98,93 @@ namespace Loja
             var ProdutoStringType = ProdutoT42
                 .Where(p => p.Nome.StartsWith("A") || p.Nome.EndsWith("o"))
                 .Select(p => new ItensSelecionados()
-                    {
-                        Nome = p.Nome,
-                        Valor = p.Valor,
-                        Dia = p.DataDeVencimento.Day
-                    }
+                {
+                    Nome = p.Nome,
+                    Valor = p.Valor,
+                    Dia = p.DataDeVencimento.Day
+                }
                 )
                 .ToList();
 
-            ProdutoStringType.ForEach(p => Console.WriteLine("Nome: "+ p.Nome.Substring(0,4).Insert(4," -Abreviado") +"/ Valor: "+ p.Valor +"/ Dia: "+ p.Dia)); /*R: Morango, Abacaxi e Melão*/
+            ProdutoStringType.ForEach(p => Console.WriteLine("Nome: " + p.Nome.Substring(0, 4).Insert(4, " -Abreviado") + "/ Valor: " + p.Valor + "/ Dia: " + p.Dia)); /*R: Morango, Abacaxi e Melão*/
 
             Console.WriteLine("\n .Remove() e .Replace(): \n");
             ProdutoStringType.ForEach(p => Console.WriteLine(p.Nome.Remove(0, 1).Replace("a", "#"), p.Valor));
 
             #endregion
+
+
+
+            #region Tutorial-5
+
+            var ProdutosT5 = new Produto().Listar();            
+
+            /* FirstOrDefault(): Primeiro elemento da lista*/
+            Console.WriteLine("\n Primeiro elemento da lista \n");            
+            var primeiroE = ProdutosT5.FirstOrDefault(); /* Não usar o "First(), porque ele retorna uma exeção!"*/
+            Console.WriteLine(JsonConvert.SerializeObject(primeiroE));
+
+
+            /* LastOrDefault(): Ultimo elemento da lista*/
+            Console.WriteLine("\n Ultimo elemento da lista \n");            
+            var ultimoE = ProdutosT5.LastOrDefault();/* Não usar o "Last(), porque ele retorna uma exeção!"*/
+            Console.WriteLine(JsonConvert.SerializeObject(ultimoE));
+
+
+            /* Any(): Informa se acoleção/lista tem elementos, retorna true ou false*/
+            if (ProdutosT5.Any())
+            {
+                Console.WriteLine("\n Existe objetos na lista: retornou TRUE! \n ");
+            }
+
+            /* Any(): Retorna true e false, baseando em uma condição com elementos da coleção/lista!  */
+            if (ProdutosT5.Any(p => p.Quantidade > 5)) /* Any() pode ser usado dentro do Where*/
+            {
+                Console.WriteLine("\n Existe produtos com a quantidade maior que 5? : Retornou TRUE! \n");
+            }
+            
+
+            /* .AddRange() : adiciona uma lista em outra lista!  */
+            Console.WriteLine("\n Adicionando uma lista na outra lista! \n");
+            var Produtos3T5 = new Produto().Listar();
+            var Produtos2T5 = new List<Produto>();
+
+            Produtos2T5.Add(new Produto() { Nome = "Iphone X", Quantidade = 5 , Valor = 7900});
+            Produtos2T5.Add(new Produto() { Nome = "Galaxy", Quantidade = 10, Valor = 2500 });
+
+            Produtos2T5.AddRange(Produtos3T5);
+
+            Produtos2T5.ForEach(p => Console.WriteLine(p.Nome));
+
+
+            /* Retorna os elementos de um array, que está em outro array, retorna os que são comum! */
+            Console.WriteLine("\n Retorna os elementos de um array, que está em outro array, retorna os que são comum!  \n");
+            int[] NumerosPares = {2, 4, 6, 8, 10 };
+            int[] NumerosImpares = { 1, 3, 5, 7, 9 };
+            int[] NumerosMisturados = { 1, 2, 3, 4 };
+
+            var TemNumerosPares = NumerosMisturados.Intersect(NumerosPares); /* 2 e 4 foram retornados*/
+
+
+
+            /* Retorna os elementos de um array, que NÃO está em outro array, retorna os que são diferentes! */
+            Console.WriteLine("\n Retorna os elementos de um array, que NÃO está em outro array, retorna os que são diferentes! \n");
+
+            var NaoTemImpares = NumerosMisturados.Except(NumerosImpares); /* 2 e 4 foram retornados*/
+
+
+            /* Range */
+            Console.WriteLine("\n  Informando uma sequencia \n");
+            var sequencia = Enumerable.Range(10, 3);
+
+            #endregion
+
+
+
+
+
+
+
 
 
             Console.ReadKey();
