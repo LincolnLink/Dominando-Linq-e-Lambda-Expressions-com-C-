@@ -175,7 +175,20 @@ namespace Loja
 
             /* Range */
             Console.WriteLine("\n  Informando uma sequencia \n");
-            var sequencia = Enumerable.Range(10, 3);
+            var sequencia = Enumerable.Range(10, 3);/*Resultado: 10, 11, 12*/
+            foreach (int item in sequencia)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
+            /* Repeate*/
+            Console.WriteLine("\n Repete a palavra 10 vezes \n");
+            var repetir = Enumerable.Repeat("Lincoln", 10);
+            foreach (string item in repetir)
+            {
+                Console.WriteLine("Nome: " +item.ToString());
+            }
+
 
             #endregion
 
