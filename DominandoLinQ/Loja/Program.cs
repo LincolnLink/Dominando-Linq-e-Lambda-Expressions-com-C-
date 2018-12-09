@@ -193,9 +193,77 @@ namespace Loja
             #endregion
 
 
+            #region Tutorial-6
+
+            var ProdutosT6 = new Produto().Listar();
 
 
+            /* Valor do produto mais caro */
+            var valorPC = ProdutosT6.Max(p => p.Valor);
+            Console.WriteLine("\n Valor do Produto mais caro: \n" + valorPC);
 
+
+            /* Valor do produto mais barato */
+            var valorPCm = ProdutosT6.Min(p => p.Valor);
+            Console.WriteLine("\n Valor do Produto mais barato: \n" + valorPCm);
+
+
+            /* Soma dos valores */
+            var soma = ProdutosT6.Sum(p => p.Valor);
+            Console.WriteLine("\n Soma dos valores: \n" + soma);
+
+
+            /*  Média dos valores*/
+            var media = ProdutosT6.Average(p => p.Valor);
+            Console.WriteLine(" \n Média do valor: \n" + media.ToString());
+
+
+            /* Agrupamento e Agregação */
+            Console.WriteLine("\n _Agrupamento_ \n ");
+            var ListaFruta = new ProdutoDoHMercado().ListarFrutas();
+            var ListaEletronico = new ProdutoDoHMercado().ListaEletronicos();
+            
+            ListaFruta.AddRange(ListaEletronico);
+            Console.WriteLine("\n Valores junstos: \n");
+            ListaFruta.ForEach(p => Console.WriteLine(JsonConvert.SerializeObject(p)));
+
+            /* Group By Into*/
+            Console.WriteLine("\n Valores Agrupados: \n");
+            var ListaTotal = (from p in ListaFruta
+                              group p by p.Categoria into grupo
+                              select new ProdutosAgrupados
+                              {
+                                  NomeDaCategoria = grupo.Key,
+                                  ValorMinimo = grupo.Min(p => p.Valor),
+                                  ValorMaximo = grupo.Max(p => p.Valor)
+
+                              }
+                              ).GroupBy(p => p.NomeDaCategoria);
+
+            ListaTotal.ToList().ForEach(p => Console.WriteLine(JsonConvert.SerializeObject(p)));
+
+            /* Agrupamento exibindo os valores */
+            Console.WriteLine("\n Agrupamento exibindo os valores: \n");
+
+            //var ListaTotal2 = from p in ListaFruta
+            //                  group p by p.Categoria;
+            /* Com LAMBDA */
+            var ListaTotal2 = ListaFruta.GroupBy(p => p.Categoria);
+
+            foreach (var ageGroup in ListaTotal2)
+            {
+                Console.WriteLine("Age Group: {0}", ageGroup.Key); //Each group has a key 
+
+                foreach (ProdutoDoHMercado s in ageGroup) // Each group has inner collection
+                    Console.WriteLine("Student Name: {0}", s.Nome);
+            }
+
+
+            #endregion
+
+            #region Tutorial-7
+
+            #endregion
 
 
 
@@ -212,5 +280,15 @@ namespace Loja
         public decimal Valor { get; set; }
 
         public int Dia { get; set; }
+    }
+
+    public class ProdutosAgrupados
+    {
+        public string NomeDaCategoria { get; set; }
+
+        public int ValorMinimo { get; set; }
+
+        public int ValorMaximo { get; set; }
+        
     }
 }
