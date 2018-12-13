@@ -17,6 +17,7 @@ namespace Loja
             var Produtos = Produto.Listar(); /* Usando um método, e botando o resultado em uma variavel*/
 
             /*Comentarios: botar comentario: CTRL + K, Ctrl + C remover: CTRL + K, Ctrl + U*/
+            /*NewTonSoft.Json instalado para exibir Json*/
 
             #region Turotial-3 
 
@@ -262,6 +263,10 @@ namespace Loja
             #endregion
 
             #region Tutorial-7
+
+
+
+
 
             #endregion
 
