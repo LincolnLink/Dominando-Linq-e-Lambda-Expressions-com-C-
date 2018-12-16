@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -55,6 +61,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Loja.Infra.EF\Loja.Infra.EF.csproj">
+      <Project>{9556F231-D8A7-400B-9F10-0FB1775E2DED}</Project>
+      <Name>Loja.Infra.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loja.Infra.LinQ\Loja.Infra.LinQ.csproj">
+      <Project>{c073eecc-9438-44ed-aba1-5c196a663b01}</Project>
+      <Name>Loja.Infra.LinQ</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LojaDominio\LojaDominio.csproj">
       <Project>{a633bd08-d40f-465e-b5d8-e452fc4a327f}</Project>
       <Name>LojaDominio</Name>

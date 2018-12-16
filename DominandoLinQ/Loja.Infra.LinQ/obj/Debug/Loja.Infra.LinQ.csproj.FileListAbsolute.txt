@@ -1,0 +1,7 @@
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\bin\Debug\Loja.Infra.LinQ.dll.config
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\bin\Debug\Loja.Infra.LinQ.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\bin\Debug\Loja.Infra.LinQ.pdb
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\obj\Debug\Loja.Infra.LinQ.csprojAssemblyReference.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\obj\Debug\Loja.Infra.LinQ.csproj.CoreCompileInputs.cache
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\obj\Debug\Loja.Infra.LinQ.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja.Infra.LinQ\obj\Debug\Loja.Infra.LinQ.pdb

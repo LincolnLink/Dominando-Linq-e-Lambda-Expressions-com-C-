@@ -108,3 +108,13 @@ D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\obj\Debug\Loja.pd
 D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Newtonsoft.Json.dll
 D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Newtonsoft.Json.pdb
 D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Newtonsoft.Json.xml
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\EntityFramework.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\EntityFramework.SqlServer.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Loja.Infra.EF.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Loja.Infra.EF.pdb
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Loja.Infra.EF.dll.config
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\EntityFramework.xml
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\EntityFramework.SqlServer.xml
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Loja.Infra.LinQ.dll
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Loja.Infra.LinQ.pdb
+D:\Estudo e Projetos\LinQ e Lambda Projetos\DominandoLinQ\Loja\bin\Debug\Loja.Infra.LinQ.dll.config
