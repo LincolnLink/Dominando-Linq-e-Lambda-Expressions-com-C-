@@ -4,6 +4,7 @@ using LojaDominio;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,8 +116,7 @@ namespace Loja
             ProdutoStringType.ForEach(p => Console.WriteLine(p.Nome.Remove(0, 1).Replace("a", "#"), p.Valor));
 
             #endregion
-
-
+            
 
             #region Tutorial-5
 
@@ -264,6 +264,7 @@ namespace Loja
 
             #endregion
 
+
             #region Tutorial-7
 
             Console.WriteLine("\n Rodando o Turorial 7 \n");
@@ -281,10 +282,10 @@ namespace Loja
             /* Remove *//*
            new Infra.EF.Repositorio.RepositorioCategoria().ExcluirCategoria(1);*/
 
-            /*Retorna todos os produtos*/
+            /*Retorna todos os produtos*//*
             var lista = new Infra.EF.Repositorio.RepositorioCategoria().ListarTudo();
             Console.WriteLine("--------------- EF: ");
-            lista.ForEach(x => Console.WriteLine(x.Nome));
+            lista.ForEach(x => Console.WriteLine(x.Nome));*/
 
             /*=================== LinQ =======================*//*
             
@@ -308,11 +309,69 @@ namespace Loja
             #endregion
 
 
+            #region Tutorial-8
+            /*
+            try
+            {
+                int qtde = 1000000;
+                string tempoProcessamentoNormal = ProcessamentoNormal(qtde);
+                string tempoProcessamentoParalelo = ProcessamentoParalelo(qtde);
 
+                Console.WriteLine("Tempo Processamento Paralelo " + tempoProcessamentoParalelo);
+                Console.WriteLine("Tempo Processamento Normal " + tempoProcessamentoNormal);
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }*/
+            #endregion
 
             Console.ReadKey();
 
         }
+
+
+        /// <summary>
+        /// Método do tutorial 8 processamento normal
+        /// </summary>
+        private static string ProcessamentoNormal(int qtde)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            for (int i = 0; i < qtde; i++)
+            {
+                Console.WriteLine("Escrevendo a linha: "+ i.ToString());
+            }
+
+            sw.Stop();
+
+            return sw.Elapsed.ToString();
+        }
+
+
+        /// <summary>
+        /// Método do tutorial 8 processamento paralelo
+        /// </summary>
+        private static string ProcessamentoParalelo(int qtde)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            Parallel.For(0, qtde, index =>
+           {
+               Console.WriteLine("Escrevendo a linha: " + index.ToString());
+           });
+
+            sw.Stop();
+
+            return sw.Elapsed.ToString();
+        }
+
+
+
     }
 
     public class ItensSelecionados
