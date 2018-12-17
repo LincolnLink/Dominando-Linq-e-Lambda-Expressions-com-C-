@@ -272,37 +272,37 @@ namespace Loja
             /*Entity Fremework*/
             /*Estilo: EF Designer from database*/
 
-            /* Insert *//*            
+            /* Insert */        
             new Infra.EF.Repositorio.RepositorioCategoria().AdicionarCategoria(1 ,"Frutas");
-            new Infra.EF.Repositorio.RepositorioCategoria().AdicionarCategoria(2 ,"Eletronicos");*/
+            new Infra.EF.Repositorio.RepositorioCategoria().AdicionarCategoria(2 ,"Eletronicos");
 
-            /* Alterando *//*
-            new Infra.EF.Repositorio.RepositorioCategoria().AlterarCategoria(1, "Frutas Doces");*/
+            /* Alterando */
+            new Infra.EF.Repositorio.RepositorioCategoria().AlterarCategoria(1, "Frutas Doces");
 
-            /* Remove *//*
-           new Infra.EF.Repositorio.RepositorioCategoria().ExcluirCategoria(1);*/
+            /* Remove */
+           new Infra.EF.Repositorio.RepositorioCategoria().ExcluirCategoria(1);
 
-            /*Retorna todos os produtos*//*
+            /*Retorna todos os produtos*/
             var lista = new Infra.EF.Repositorio.RepositorioCategoria().ListarTudo();
             Console.WriteLine("--------------- EF: ");
-            lista.ForEach(x => Console.WriteLine(x.Nome));*/
+            lista.ForEach(x => Console.WriteLine(x.Nome));
 
-            /*=================== LinQ =======================*//*
+            /*=================== LinQ =======================*/
             
-            /* Insert */ /*
+            /* Insert */ 
             new Infra.LinQ.Repositorio.RepositorioCategoria().AdicionarCategoria(3, "Roupas");
-            new Infra.LinQ.Repositorio.RepositorioCategoria().AdicionarCategoria(4, "Games");*/
+            new Infra.LinQ.Repositorio.RepositorioCategoria().AdicionarCategoria(4, "Games");
 
-            /* Alterando *//*
-            new Infra.LinQ.Repositorio.RepositorioCategoria().AlterarCategoria(4, "Carnes vermelha");*/
+            /* Alterando */
+            new Infra.LinQ.Repositorio.RepositorioCategoria().AlterarCategoria(4, "Carnes vermelha");
 
-            /* Remover o valor*//*
-            new Infra.LinQ.Repositorio.RepositorioCategoria().ExcluirCategoria(4);*/
+            /* Remover o valor*/
+            new Infra.LinQ.Repositorio.RepositorioCategoria().ExcluirCategoria(4);
 
-            /*Retorna todos os produtos*//*
+            /*Retorna todos os produtos*/
             var lista2 = new Infra.LinQ.Repositorio.RepositorioCategoria().ListarTudo();
             Console.WriteLine("--------------- LinQ: ");
-            lista2.ForEach(x => Console.WriteLine(x.Nome));*/
+            lista2.ForEach(x => Console.WriteLine(x.Nome));
 
 
 
